@@ -53,7 +53,7 @@ def plot_pnl_distribution(trades):
     plt.show()
 
 def plot_monthly_returns(trades):
-    # Since intraday, group by day
+    
     if not trades:
         return
     completed = [t for t in trades if t['exit_time']]
@@ -61,7 +61,7 @@ def plot_monthly_returns(trades):
     df_trades['date'] = df_trades['exit_time'].dt.date
     daily_pnl = df_trades.groupby('date')['exit_premium'].sum() - df_trades.groupby('date')['entry_premium'].sum()
     
-    # Heatmap by month/day
+    
     daily_pnl = daily_pnl.reset_index()
     daily_pnl['month'] = pd.to_datetime(daily_pnl['date']).dt.month
     daily_pnl['day'] = pd.to_datetime(daily_pnl['date']).dt.day
@@ -83,20 +83,20 @@ def plot_trade_analysis(trades):
     
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
     
-    # PnL over time
+    
     axes[0,0].plot(df_trades['exit_time'], df_trades['pnl'])
     axes[0,0].set_title('PnL Over Time')
     
-    # Duration distribution
+    
     axes[0,1].hist(df_trades['duration'], bins=20)
     axes[0,1].set_title('Trade Duration Distribution')
     
-    # Win/Loss
+    
     win_loss = df_trades['pnl'] > 0
     axes[1,0].pie([sum(win_loss), sum(~win_loss)], labels=['Wins', 'Losses'], autopct='%1.1f%%')
     axes[1,0].set_title('Win/Loss Ratio')
     
-    # Cumulative PnL
+    
     axes[1,1].plot(np.cumsum(df_trades['pnl']))
     axes[1,1].set_title('Cumulative PnL')
     
