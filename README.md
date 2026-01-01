@@ -32,7 +32,7 @@ The project focuses on **strategy logic, signal generation, performance analytic
 ##  Project Structure
 
 ```
-
+'''
 trade/
 ├── analytics.py          # Performance metrics and statistics
 ├── backtest.py           # Backtesting engine
@@ -46,12 +46,12 @@ trade/
 ├── output/               # Generated plots 
 ├── .gitignore
 └── README.md
-
+'''
 ````
 
 ---
 
-## ⚙️ Environment Setup
+##  Environment Setup
 
 ### 1. Clone the repository
 ```bash
@@ -75,7 +75,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Running the Project
+##  Running the Project
 
 ```bash
 python main.py
@@ -92,7 +92,7 @@ This will:
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 The analytics module computes:
 
@@ -110,7 +110,7 @@ These metrics help evaluate **risk-adjusted returns**, not just profitability.
 
 ---
 
-## 📈 Visualization
+##  Visualization
 
 Generated plots may include:
 
@@ -133,7 +133,7 @@ Generated plots may include:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Run unit tests using:
 
@@ -143,7 +143,7 @@ pytest tests/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * Python 3.x
 * Pandas
@@ -153,7 +153,7 @@ pytest tests/
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 * Transaction cost & slippage modeling
 * Options strategies (straddle, strangle, spreads)
@@ -170,3 +170,4 @@ B.Tech (ECE) |
 
 Tell me what you want to do next.
 ```
+
