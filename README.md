@@ -32,21 +32,22 @@ The project focuses on **strategy logic, signal generation, performance analytic
 ##  Project Structure
 
 ```
-'''
-trade/
-├── analytics.py          # Performance metrics and statistics
-├── backtest.py           # Backtesting engine
-├── data_loader.py        # Data ingestion and validation
-├── indicators.py         # Technical indicators
-├── preprocess.py         # Data cleaning and feature prep
-├── strategy.py           # Strategy logic and signal generation
-├── visualization.py     # Charts and plots
-├── main.py               # Entry point
-├── tests/                # Unit tests
-├── output/               # Generated plots 
-├── .gitignore
-└── README.md
-'''
+| Path / File        | Description                               |
+|--------------------|-------------------------------------------|
+| `analytics.py`     | Performance metrics and statistics        |
+| `backtest.py`      | Backtesting engine                        |
+| `data_loader.py`   | Data ingestion and validation             |
+| `indicators.py`    | Technical indicators                      |
+| `preprocess.py`    | Data cleaning and feature preparation     |
+| `strategy.py`      | Strategy logic and signal generation      |
+| `visualization.py` | Charts and plots                          |
+| `main.py`          | Project entry point                       |
+| `tests/`           | Unit tests                                |
+| `output/`          | Generated plots and artifacts             |
+| `.gitignore`       | Git ignore rules                          |
+| `README.md`        | Project documentation                     |
+
+
 ````
 
 ---
@@ -170,4 +171,5 @@ B.Tech (ECE) |
 
 Tell me what you want to do next.
 ```
+
 
